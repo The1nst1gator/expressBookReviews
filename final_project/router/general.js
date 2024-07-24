@@ -12,7 +12,9 @@ public_users.post("/register", (req,res) => {
 
 // Get the book list available in the shop
 public_users.get('/',function (req, res) {
-  //Write your code here
+  // Fetch all books, convert to JSON string and send string as a response
+  const booksJSON = JSON.stringify(books); 
+  res.send(booksJSON); 
   return res.status(300).json({message: "Yet to be implemented"});
 });
 
